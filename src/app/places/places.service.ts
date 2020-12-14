@@ -28,7 +28,7 @@ export class PlacesService {
         name: "Chile",
         continent: "Latin America",
         img: "https://www.caracteristicas.co/wp-content/uploads/2018/09/chile-e1578422954245.jpg",
-        interests: ["Santiago de Chile", "Cordillera"]
+        interests: ["Santiago de Chile", "Cordillera de los Andes"]
       },
       {
         id: 4,

@@ -31,11 +31,16 @@
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-list>
+        <ion-list *ngIf="place.interests && place.interests.length > 0; else noPlaces">
           <ion-item *ngFor="let i of place.interests">
             {{ i }}
           </ion-item>
         </ion-list>
+        <ng-template #noPlaces>
+          <ion-text>
+            <p>No places pinned yet.</p>
+          </ion-text>
+        </ng-template>
       </ion-col>
     </ion-row>
   </ion-grid>

@@ -6,15 +6,42 @@
   </ion-toolbar>
 </ion-header>
 
+<br />
+<br />
+<br />
+<br />
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Bienvenido a la aplicación</ion-title>
+      <ion-title size="large">Welcome to my App</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div id="container">
+          <strong>Places of the World:</strong>
+          <p><a defaultHref="/places">See here a list full of beautiful places!</a></p>
+          <ion-button color="primary" [routerLink]="['/places']">Watch!</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
   <div id="container">
     <strong>Creado con Ionic - Documentación:</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+
+    
 </ion-content>
