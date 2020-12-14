@@ -9,9 +9,13 @@ import { PlacesService } from './places.service';
 })
 export class PlacesPage implements OnInit {
 
+  places = [];
+
   constructor(private placesService: PlacesService) { }
 
   ngOnInit() {
+    this.places = this.placesService.getPlaces();
+
   }
 
 }

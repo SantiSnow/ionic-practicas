@@ -6,7 +6,7 @@ import { Place } from './place.model'
 })
 export class PlacesService {
 
-    //datos que simulan una peticion http
+  //datos que simulan una peticion http
 
     private places: Place[] = [
       {
@@ -50,8 +50,8 @@ export class PlacesService {
 
   getPlace(placeId: number){
     return{
-      ...this.places.find(i => {
-        i.id === placeId;
+      ...this.places.find(place => {
+        return place.id === placeId;
       })
     }
   }
@@ -72,8 +72,10 @@ export class PlacesService {
 
   }
 
-  deletePlace(){
-
+  deletePlace(placeId: number){
+    this.places = this.places.filter(place =>{
+      return place.id !== placeId;
+    })
   }
 
   updatePlace(){
