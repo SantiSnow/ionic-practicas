@@ -13,7 +13,17 @@ const routes: Routes = [
   },
   {
     path: 'places',
-    loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
+    children: [
+      {
+       path: "",
+       loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule) 
+      },
+      {
+        path: ":placeId",
+        loadChildren: () => import('./places/places-detail/places-detail.module').then(m => m.PlacesDetailPageModule)
+      }
+    ],
+    
   },
 ];
 

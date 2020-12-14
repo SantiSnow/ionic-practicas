@@ -5,13 +5,8 @@
 </ion-header>
 
 <ion-content>
-
-  <ion-title>
-    Aquí puede ver sus lugares guardados
-  </ion-title>
-  
   <ion-list>
-    <ion-item *ngFor="let i of places">
+    <ion-item *ngFor="let i of places" [routerLink]="['/places', 'i.id']">
       <ion-avatar slot="start">
         <ion-img [src]="i.img"></ion-img>
       </ion-avatar>
