@@ -21,11 +21,7 @@ export class PlacesDetailPage implements OnInit {
 
       const idRecibido = parseInt(idSeleccionado, 10);
 
-      console.log(idRecibido);
-
       this.place = this.placesService.getPlace(idRecibido);
-
-      console.log(this.place);
     });
   }
 
